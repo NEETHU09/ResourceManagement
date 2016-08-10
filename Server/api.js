@@ -4,6 +4,7 @@ var files = process.argv;
 var inputFile = files[2] || "Skill_Gap.xls";
 var outputFile = files[3] || "output.json";
 console.log(files);
+
 xlsxjson ({
   input : inputFile,
   output : outputFile
