@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var Employees = require('../output.json');
+var Employees = require('../out.json');
 var app = express();
-
 router.route('/all')
         .get(function(req,res){
+          console.log("Inside All");
           res.json(Employees);
 });
 router.route('/:EmpId')
@@ -14,7 +14,7 @@ router.route('/:EmpId')
         for(var i=0;i<Employees.length;i++){
           if(Employees[i]['Emp No'] == id){
             console.log(Employees[i]['Emp No']);
-            console.log(id);
+            //console.log(id);
             employee = Employees[i];
             break;
           }
